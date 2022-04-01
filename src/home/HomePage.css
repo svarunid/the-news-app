@@ -1,0 +1,27 @@
+.bg-image {
+  height: calc(100vh - 80px);
+  background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.25)),
+    radial-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.75)),
+    url(../images/homeBG.jpg);
+}
+
+.body{
+  height: calc(100vh - 80px);
+}
+
+.animate {
+  animation: scroll-down 1.5s infinite;
+}
+
+.animate:hover {
+  cursor: pointer;
+}
+
+@keyframes scroll-down {
+  0% {
+    bottom: 3vh;
+  }
+  100% {
+    bottom: 1vh;
+  }
+}
