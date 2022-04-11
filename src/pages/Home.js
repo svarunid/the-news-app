@@ -20,6 +20,8 @@ export default function Home() {
 
     document.addEventListener("scroll", handleScroll);
 
+    document.title = "Home";
+
     return function cleanup() {
       document.removeEventListener("scroll", handleScroll);
     };
@@ -59,9 +61,9 @@ export default function Home() {
             className="ml-4 w-full focus:outline-none bg-white lg:bg-neutral-200"
             placeholder="Search News"
           ></input>
-          <div className="flex flex-row">
-            <Article />
-          </div>
+        </div>
+        <div className="flex flex-row items-center justify-center">
+          <Article />
         </div>
       </div>
     </div>
