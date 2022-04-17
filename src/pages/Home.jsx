@@ -50,7 +50,7 @@ export default function Home() {
           id="scrollDownIcon"
           size={42}
           color="rgb(229 229 229)"
-          className={`absolute ${scroll ? "animate" : ""}`}
+          className={`absolute ${scroll ? "animate" : "hidden"}`}
           onClick={scrollBtnClik}
         />
       </header>
@@ -62,7 +62,7 @@ export default function Home() {
             placeholder="Search News"
           ></input>
         </div>
-        <div className="flex flex-row items-center justify-center">
+        <div className="container mx-auto px-24 py-8">
           <Article />
         </div>
       </div>
