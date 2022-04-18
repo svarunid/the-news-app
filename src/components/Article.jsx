@@ -1,9 +1,15 @@
-export default function Article() {
-  const imgUrl = "https://cdn.vox-cdn.com/thumbor/OYrvaaOHBuEpdTeRO55nZnZdexs=/0x215:3000x1786/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/8937281/acastro_170726_1777_0007_v2.jpg";
+export default function Article(props) {
   return (
-    <div className="w-96 h-64 drop-shadow rounded border border-gray-400 flex flex-col">
-        <img src={imgUrl} alt="something" />
-      <p>something</p>
-    </div>
+    <article className="w-full drop-shadow rounded bg-white">
+      <img className="w-full h-32 rounded-t object-cover" src={props.imageUrl} alt="something"/>
+      <div className="px-4 py-4 flex flex-col">
+          <p className="line-clamp-2 font-medium leading-snug text-slate-900">{props.title}</p>
+          <div className="flex flex-row place-content-between font-medium text-sm text-slate-600 my-1">
+            <span>{props.source}</span>
+            <span>{props.publishedDate}</span>
+          </div>
+          <p className="line-clamp-4 text-justify text-sm text-slate-900 leading-tight">{props.description}</p>
+      </div>
+    </article>
   );
 }

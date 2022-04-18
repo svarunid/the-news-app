@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as Menu } from "../icons/menu.svg";
 import "./../App.css";
+import Footer from "./Footer";
 
 export default function NavBar() {
   const [menuState, setMenuState] = useState(false);
@@ -48,6 +49,7 @@ export default function NavBar() {
         </Link>
       </nav>
       <Outlet/>
+      <Footer/>
     </div>
   );
 }
